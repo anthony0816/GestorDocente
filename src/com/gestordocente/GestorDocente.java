@@ -216,7 +216,7 @@ public class GestorDocente extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
