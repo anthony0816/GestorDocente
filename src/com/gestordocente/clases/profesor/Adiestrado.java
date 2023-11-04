@@ -19,9 +19,14 @@ public class Adiestrado extends Profesor {
 
         this.autorizo = autorizo;
     }
-    
+    // METODOS GET
     public boolean getAutorizo(){
         return this.autorizo;
     }
 
+    // METODOS SET
+    
+   public void setAutorizo(boolean autorizo){
+   this.autorizo = autorizo; 
+   }
 }

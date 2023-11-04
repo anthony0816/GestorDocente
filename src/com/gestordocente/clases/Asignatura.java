@@ -9,6 +9,7 @@ package com.gestordocente.clases;
  * @author sardlimad
  */
 public class Asignatura {
+
     protected String nombre;
     protected String diciplina;
     protected int[] horasClase = new int[5]; //[0]Conferencias, [1]CP, [2]Seminario, [3]Laboratorio, [4]Taller.
@@ -40,28 +41,72 @@ public class Asignatura {
         this.aAcademico = aAcad;
         this.tipoEvalFinal = tipoEvalFinal;
     }
-    
-    public String getNombre(){
+    // METODOS GET
+
+    public String getNombre() {
         return this.nombre;
     }
-    
-    public String getDisciplina(){
+
+    public String getDisciplina() {
         return this.diciplina;
     }
-    
-    public String getPlanEst(){
+
+    public int[] getHorasClase() {
+        return horasClase;
+    }
+
+    public String getPlanEst() {
         return this.planEst;
     }
-    
-    public String getCarrera(){
+
+    public String getCarrera() {
         return this.carrera;
     }
-    
-    public int getAnho(){
+
+    public int getAnho() {
         return this.aAcademico;
     }
-    
-    public String getEvalFinal(){
+
+    public String getEvalFinal() {
         return this.tipoEvalFinal;
     }
+    // METODOS SET
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setDiciplina(String diciplina) {
+        this.diciplina = diciplina;
+    }
+
+    public void setHorasClase(int conf, int cp, int sem, int lab, int taller) {
+        int[] aux = {conf, cp, sem, lab, taller};
+
+        this.horasClase = aux;
+    }
+
+    public void setPlanEst(String planEst) {
+        
+        this.planEst = planEst;
+    }
+    
+    public void setCarreras (String carrera){
+    this.carrera = carrera;
+    }
+    
+    public void setaAcademico(int aAcademico){
+    this.aAcademico = aAcademico;
+    }
+    
+    public void setTipoEvalFinal (String TipoEvalFinal){
+    this.tipoEvalFinal = TipoEvalFinal;
+    }
+    
+    
+    
+    
+    
+    
+    
 }
