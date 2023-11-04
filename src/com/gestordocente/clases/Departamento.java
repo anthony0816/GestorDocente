@@ -13,6 +13,7 @@ import com.gestordocente.clases.profesor.Profesor;
  * @author sardlimad
  */
 public class Departamento {
+
     protected String nombre;
     protected String facultad;
     protected Profesor jefe;
@@ -33,7 +34,7 @@ public class Departamento {
 
     }
 
-    //Metodos set
+    //METODOS SET
     public void setNombre(String text) {
         this.nombre = text;
     }
@@ -45,9 +46,25 @@ public class Departamento {
     public void setJefe(Profesor jefe) {
         this.jefe = jefe;
     }
-    
-    //Metodos get
-    public Asignatura[] getAsignaturas(){
+
+//METODOS GET
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getFacultad() {
+        return facultad;
+    }
+
+    public Profesor getJefe() {
+        return jefe;
+    }
+
+    public Profesor[] getProfesores() {
+        return profesores;
+    }
+
+    public Asignatura[] getAsignaturas() {
         return this.asignaturas;
     }
 
@@ -61,12 +78,12 @@ public class Departamento {
 
         //Alamcenar nuevo Profesor en la ultima posicion
         aux[aux.length - 1] = new Profesor(ci, nombre, catDocente, catCientifica, tiempo);
-        
+
         this.profesores = aux;
     }
 
     public void AddProfesor(String ci, String nombre, Categoria catDocente, Categoria catCientifica, int tiempo, boolean autorizo) {
-        
+
         Profesor aux[] = new Profesor[this.profesores.length + 1]; //Crear nuevo array
 
         for (int i = 0; i < this.profesores.length; i++) {
@@ -75,7 +92,7 @@ public class Departamento {
 
         //Alamcenar nuevo Profesor en la ultima posicion (Tipo Adiestrado)
         aux[aux.length - 1] = new Adiestrado(ci, nombre, catDocente, catCientifica, tiempo, false);
-        
+
         this.profesores = aux;
     }
 
@@ -88,11 +105,11 @@ public class Departamento {
         }
 
         aux[aux.length - 1] = new Asignatura(nombre, diciplina, horasClase, planEst, carrera, aAcad);
-        
+
         this.asignaturas = aux;
     }
-    
-    public void AddAsignatura(String nombre, String diciplina, int[] horasClase, String planEst, String carrera, int aAcad, String tipoEvalFinal){
+
+    public void AddAsignatura(String nombre, String diciplina, int[] horasClase, String planEst, String carrera, int aAcad, String tipoEvalFinal) {
         Asignatura aux[] = new Asignatura[this.asignaturas.length + 1]; //Crear nuevo array
 
         for (int i = 0; i < this.asignaturas.length; i++) {
@@ -100,7 +117,7 @@ public class Departamento {
         }
 
         aux[aux.length - 1] = new Asignatura(nombre, diciplina, horasClase, planEst, carrera, aAcad, tipoEvalFinal);
-        
+
         this.asignaturas = aux;
     }
 }
